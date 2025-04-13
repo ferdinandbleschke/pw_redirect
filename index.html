@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Passwortseite</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f9f9f9;
+    }
+    input, button {
+      font-size: 1rem;
+      padding: 0.5em;
+      margin: 0.5em;
+    }
+    .error {
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🗝️ Test überschrift </h1>
+  <input type="password" id="pw" placeholder="Passwort eingeben..." />
+  <button onclick="check()">Los geht’s!</button>
+  <div class="error" id="error">Falsches Passwort 😬</div>
+
+  <script>
+    function check() {
+      const pw = document.getElementById("pw").value.toLowerCase();
+      if (pw === "richtig") {
+        window.location.href = "https://dictionary.cambridge.org/dictionary/german-english/richtig"; 
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
