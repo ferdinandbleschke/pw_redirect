@@ -136,16 +136,16 @@
             
             // Define multiple redirect options
             const redirectOptions = {
-                "option1": "https://early-deck-358021.framer.app/k", // First redirect option
-                "option2": "https://early-deck-358021.framer.app/m"  // Second redirect option
+                "option_k": "https://early-deck-358021.framer.app/k", // First redirect option
+                "option_m": "https://early-deck-358021.framer.app/m"  // Second redirect option
             };
             
             // Get redirect parameter from URL
             const urlParams = new URLSearchParams(window.location.search);
-            const redirectParam = urlParams.get('redirect') || 'option1'; // Default to option1 if no parameter
+            const redirectParam = urlParams.get('redirect') || 'option_k'; // Default to option_k if no parameter
             
             // Select the redirect URL based on parameter
-            const redirectUrl = redirectOptions[redirectParam] || redirectOptions['option1'];
+            const redirectUrl = redirectOptions[redirectParam] || redirectOptions['option_k'];
             // =============================================
             
             // Toggle password visibility
